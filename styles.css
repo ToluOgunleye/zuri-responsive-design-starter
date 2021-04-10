@@ -17,7 +17,24 @@ div.nav-bar {
 
 div.logo {
     font-size: 1.5rem;
-    color: #bcc3c7;
+    color: #290663;
+}
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
 }
 
 ul.nav-links {
@@ -43,6 +60,38 @@ ul li a:hover {
     background: #fff;
     padding: 0.5rem;
 }
+ 
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    div.nav-bar {
+        flex-direction: column;
+        padding: 1rem 2rem;
+        
+    }
+    div.logo {
+        font-size: 1.2em;
+    }
+    ul.nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .toggle-button {
+        display: flex;
+    }
+    ul li a:hover {
+        padding: .5rem 10.7rem;
+    }
+    ul li {
+        margin: .5em;
+    }
+}
+ 
 
 div.hero-section {
     background: #304353;
@@ -87,6 +136,12 @@ div.hero-content-btn a {
     letter-spacing: 2px;
 }
 
+@media only screen and (max-width: 600px) {
+    div.hero-section {
+        padding: 7rem 3rem;s
+    }
+}
+
 div.hero-background {
     background: #f0f0f0;
     padding: 10rem;
@@ -128,6 +183,15 @@ div.hero-background-pos {
     height: 140px;
     border-radius: 50%;
     box-shadow: 2px 2px 15px 0 rgb(135 135 135 / 40%);
+}
+@media only screen and (max-width: 600px) {
+    div.hero-background-pos {
+        display: none;
+    }
+    div.background{
+        padding: 2em;
+        height: fit-content;
+    }
 }
 
 div.snapshot-team {
@@ -207,6 +271,17 @@ div.box1 h5 {
     color: #E44C65;
     font-size: 1rem;
 }
+
+@media only screen and (max-width: 600px) {
+    div.snapshot-box {
+        flex-wrap: wrap;
+    }
+    div.snapshot-box-content{
+        flex-wrap: wrap;
+    }
+    
+}
+
 
 div.gallery-section {
     background: #fff;
@@ -344,4 +419,17 @@ div.footer h6 {
     color: #88949B;
     font-size: 1rem;
     padding-top: 6rem;
+}
+@media only screen and (max-width: 600px) {
+    div.footer-input{
+    flex-direction: column;
+    }
+    input[type="text"], input[type="email"] {
+        width: 70%;
+        margin: .5rem auto;
+
+    }
+    textarea {
+        width: 70%;
+    }
 }
